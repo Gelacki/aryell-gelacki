@@ -1,11 +1,12 @@
 .main-header {
-  background-color: var(--background-tertiary-color);
+  background-color: var(--background-primary-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 38px 48px;
+  padding: 38px 60px;
   position: relative;
+  align-items: center;
 }
 
 .logo {
@@ -15,7 +16,8 @@
 }
 
 .img-mobile {
-  display: block;
+  width: 175px;
+  height: auto;
 }
 
 .img-desktop {
@@ -50,7 +52,51 @@ nav {
   text-decoration: none;
   font-weight: var(--menu-text-weight);
   font-size: 24px;
+  
 }
 .list-links li a.active {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu {
+    margin-top: 0;
+    width: 467px;
+  }
+  .navigation-menu label {
+    display: none;
+  }
+
+  .navigation-menu nav {
+    display: block;
+  }
+  .navigation-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Adiciona um espaço de 24px entre cada link */
+    padding: 0;
+  }
+  .navigation-menu li {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-header {
+    padding: 38px 450px 38px 60px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 175px;
+    height: 64px;
+  }
+  .navigation-menu a:hover {
+    color: var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-header {
+    padding: 38px 160px;
+  }
 }
