@@ -1,43 +1,63 @@
 .main-header {
-  background-color: var(--background-primary-color);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 38px 60px;
-  position: relative;
   align-items: center;
+  background-color: rgba(2, 7, 18, 0.94);
+  border-bottom: 1px solid rgba(8, 125, 255, 0.14);
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  padding: 28px clamp(22px, 6vw, 72px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.logo {
-  display: inline-block;
-  width: 68px;
-  height: 64px;
+.brand {
+  align-items: center;
+  color: #ffffff;
+  display: inline-flex;
+  text-decoration: none;
 }
 
-.img-mobile {
-  width: 175px;
-  height: auto;
-}
-
-.img-desktop {
-  display: none;
-}
-.navigation-menu {
-  margin-top: 24px;
-}
-
-input[type="checkbox"]:checked ~ nav {
+.brand-logo {
   display: block;
+  height: auto;
+  max-height: 68px;
+  width: 150px;
+}
+
+.navigation-menu {
+  align-items: center;
+  display: flex;
+}
+
+.menu-button {
+  cursor: pointer;
+  display: inline-grid;
+  gap: 6px;
+  height: 44px;
+  place-content: center;
+  width: 44px;
+}
+
+.menu-button span {
+  background-color: #ffffff;
+  display: block;
+  height: 2px;
+  width: 28px;
+}
+
+.navigation-menu nav {
+  background-color: var(--background-secondary-color);
+  display: none;
+  left: 0;
+  padding: 22px;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 100%;
-  background-color: var(--background-tertiary-color);
 }
 
-nav {
-  display: none;
+.navigation-menu input[type="checkbox"]:checked ~ nav {
+  display: block;
 }
 
 .list-links {
@@ -47,56 +67,99 @@ nav {
 .list-links li {
   margin: 16px 0;
 }
+
 .list-links li a {
-  color: var(--text-secondary-color);
-  text-decoration: none;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 0.78rem;
   font-weight: var(--menu-text-weight);
-  font-size: 24px;
-  
-}
-.list-links li a.active {
-  text-decoration: underline;
+  letter-spacing: 0.02em;
+  padding: 8px 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-  .navigation-menu {
-    margin-top: 0;
-    width: 467px;
-  }
-  .navigation-menu label {
+.list-links li a::after {
+  background-color: var(--accent-color);
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.list-links li a:hover::after,
+.list-links li a:focus-visible::after,
+.list-links li a.active::after {
+  transform: scaleX(1);
+}
+
+.list-links li a:hover,
+.list-links li a:focus-visible,
+.list-links li a.active {
+  color: var(--accent-color);
+}
+
+.list-links li a.contact-link {
+  align-items: center;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, font-size 0.2s ease;
+}
+
+.list-links li a.contact-link::after {
+  display: none;
+}
+
+.list-links li a.contact-link:hover,
+.list-links li a.contact-link:focus-visible {
+  background-color: var(--accent-dark-color);
+  border-color: var(--accent-dark-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .menu-button {
     display: none;
   }
 
   .navigation-menu nav {
+    background-color: transparent;
     display: block;
-  }
-  .navigation-menu ul {
-    display: flex;
-    align-items: center;
-    gap: 24px; /* Adiciona um espaço de 24px entre cada link */
     padding: 0;
+    position: static;
+    width: auto;
   }
-  .navigation-menu li {
+
+  .list-links {
+    align-items: center;
+    display: flex;
+    gap: clamp(18px, 2vw, 30px);
+  }
+
+  .list-links li {
     margin: 0;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 520px) {
   .main-header {
-    padding: 38px 450px 38px 60px;
-    margin: 0 auto;
+    padding-block: 18px;
   }
-  .logo {
-    width: 175px;
-    height: 64px;
-  }
-  .navigation-menu a:hover {
-    color: var(--primary-color);
-  }
-}
 
-@media screen and (min-width: 1920px) {
-  .main-header {
-    padding: 38px 160px;
+  .brand-logo {
+    width: 124px;
   }
 }
