@@ -576,7 +576,7 @@ p {
   }
 
   .hero-section {
-    min-height: auto;
+    min-height: 0px;
   }
 
   .hero-visual {
