@@ -3,47 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon principal (idealmente 32x32) e fallback 16x16 -->
-    <link rel="icon" href="assets/favicon-32px.svg" type="image/png" sizes="32x32">
-    <link rel="icon" href="assets/favicon-16px.svg" type="image/png" sizes="16x16">
-    <!-- Ícone para dispositivos Apple -->
+    <link rel="icon" href="assets/favicon-32px.svg" type="image/svg+xml" sizes="32x32">
+    <link rel="icon" href="assets/favicon-16px.svg" type="image/svg+xml" sizes="16x16">
     <link rel="apple-touch-icon" href="assets/favicon-180px.svg" sizes="180x180">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Aryell Gelacki - Karate</title>
 </head>
 <body>
   <header class="main-header">
-<a class="logo" href="index.html" title="voltar para a página inicial">
-        <img class="img-mobile" src="assets/logo.png" alt="Logo faixa preta com as iniciais AG do nome Aryell Gelacki" />
-      </a>
-      <div class="navigation-menu">
-        <label for="menu">
-            <img class="menu-icon" src="assets/menu-hamburgue-branco.png" alt="Ícone de menu" />
-        </label>
-        <input type="checkbox" id="menu" hidden />
-        <nav>
-          <ul class="list-links">
-            <li>
-              <a href="#" target="_blank" title="Acessar Home">HOME</a>
-            </li>
-            <li>
-              <a href="#" target="_blank" title="Acessar Sobre">SOBRE</a>
-            </li>
-            <li>
-              <a href="#" target="_blank" title="Acessar Conquistas">CONQUISTAS</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="Acessar Treinamentos">TREINAMENTOS</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="Acessar Galeria">GALERIA</a>
-              </li>
-              <li>
-                <a href="#" target="_blank" title="Acessar Contato">CONTATO</a>
-            </li>
-            </ul>
-        </nav>
-      </div>
+    <a class="brand" href="#home" title="Voltar para o início">
+      <img class="brand-logo" src="assets/logo-header.png" alt="Logo Aryell Gelacki Karate">
+    </a>
+
+    <div class="navigation-menu">
+      <input type="checkbox" id="menu" hidden>
+      <label class="menu-button" for="menu" aria-label="Abrir menu de navegação">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+<nav aria-label="Navegação principal">
+  <ul class="list-links">
+          <li><a href="#home" class="active" title="Acessar Home">HOME</a></li>
+          <li><a href="#sobre" title="Acessar Sobre">SOBRE</a></li>
+          <li><a href="#conquistas" title="Acessar Conquistas">CONQUISTAS</a></li>
+          <li><a href="#treinamentos" title="Acessar Treinamentos">TREINAMENTOS</a></li>
+          <li><a href="#galeria" title="Acessar Galeria">GALERIA</a></li>
+          <li><a href="#patrocinadores" title="Acessar Patrocinadores">PATROCINADORES</a></li>
+          <li><a href="#contato" title="Acessar Contato">CONTATO</a></li>
+          <li><a class="contact-link" href="#contact-modal" data-open-contact-modal>FALE COMIGO</a></li>
+          </ul>
+          </nav>
+          </div>
   </header>
+<main>
+  <section class="hero-section" id="home">
+    <div class="section-container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Atleta de karate</p>
+        <h1>Disciplina <span>Foco</span> Superação</h1>
+        <p>O karate é mais que um esporte. É um estilo de vida que forma corpo, mente e caráter.</p>
+        <div class="action-row">
+          <a class="primary-action" href="#sobre">Conheça minha história</a>
+          <a class="secondary-action" href="#galeria" data-aos="fade-up" data-aos-delay="200">Assista ao vídeo</a>
+        </div>
+      </div>
+
+      <div class="hero-visual image-slot">
+        <span>Imagem principal do atleta</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="sobre">
+    <div class="section-container about-grid">
+      <div class="section-copy">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Dedicação que gera resultados</h2>
+        <p>
+          Atleta de karate com anos de dedicação, treinamento e competição.
+          Representando com orgulho minha equipe, minha cidade e os valores
+          que o esporte constrói dentro e fora do tatame.
+        </p>
+        <a class="primary-action compact-action" href="#contato">Saiba mais</a>
+      </div>
+
+      <div class="values-list">
+        <article data-aos="fade-right" data-aos-delay="100">
+          <span class="icon-placeholder">01</span>
+          <div>
+            <h3>Foco</h3>
+            <p>Concentração total em cada treino e em cada luta.</p>
+          </div>
+        </article>
+        <article data-aos="fade-right" data-aos-delay="200">
+          <span class="icon-placeholder">02</span>
+          <div>
+            <h3>Disciplina</h3>
+            <p>Rotina, constância e respeito que transformam sonhos em conquistas.</p>
+          </div>
+        </article>
+        <article data-aos="fade-right" data-aos-delay="300">
+          <span class="icon-placeholder">03</span>
+          <div>
+            <h3>Respeito</h3>
+            <p>Pelos colegas, adversários e pela arte que pratico.</p>
+          </div>
+        </article>
+      </div>
+      <div class="about-visual image-slot" data-aos="zoom-in-left" data-aos-duration="800">
+        <span>Imagem de treino ou concentração</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section" id="conquistas">
+    <div class="section-container">
+      <p class="eyebrow center-text">Conquistas</p>
+      <h2 class="center-text">Trajetória de vitórias</h2>
+      <div class="stats-grid">
+        <article data-aos="fade-up" data-aos-delay="0"><span>25+</span>
+          <p>Competições disputadas</p>
+        </article>
+        <article data-aos="fade-up" data-aos-delay="100"><span>15+</span>
+          <p>Ouros conquistados</p>
+        </article>
+        <article data-aos="fade-up" data-aos-delay="200"><span>30+</span>
+          <p>Pódios alcançados</p>
+        </article>
+        <article data-aos="fade-up" data-aos-delay="300"><span>5</span>
+          <p>Estados representados</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="training-section" id="treinamentos">
+    <div class="section-container training-grid">
+      <div class="section-copy">
+        <p class="eyebrow">Treinamentos</p>
+        <h2>Preparação é tudo</h2>
+        <p>
+          Treinos diários focados em técnica, condicionamento físico,
+          fortalecimento mental e estratégia para alcançar excelência nas competições.
+        </p>
+        <ul class="check-list">
+          <li>Kihon (Técnicas de base)</li>
+          <li>Kumite (Luta)</li>
+          <li>Condicionamento físico</li>
+          <li>Preparação mental</li>
+        </ul>
+      </div>
+
+      <div class="training-images">
+        <div class="image-slot" data-aos="zoom-in" data-aos-delay="0"><span>Imagem kihon</span></div>
+        <div class="image-slot" data-aos="zoom-in" data-aos-delay="100"><span>Imagem físico</span></div>
+        <div class="image-slot" data-aos="zoom-in" data-aos-delay="200"><span>Imagem kumite</span></div>
+        <div class="image-slot" data-aos="zoom-in" data-aos-delay="300"><span>Imagem detalhe faixa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="galeria">
+    <div class="section-container">
+      <p class="eyebrow center-text">Galeria</p>
+      <h2 class="center-text">Momentos que inspiram</h2>
+      <div class="gallery-grid">
+        <div class="image-slot" data-aos="flip-left" data-aos-delay="0"><span>Foto 01</span></div>
+        <div class="image-slot" data-aos="flip-left" data-aos-delay="100"><span>Foto 02</span></div>
+        <div class="image-slot" data-aos="flip-left" data-aos-delay="200"><span>Foto 03</span></div>
+        <div class="image-slot" data-aos="flip-left" data-aos-delay="300"><span>Foto 04</span></div>
+        <div class="image-slot" data-aos="flip-left" data-aos-delay="400"><span>Foto 05</span></div>
+      </div>
+      <a class="primary-action center-action" href="#galeria">Ver mais fotos</a>
+    </div>
+  </section>
+
+  <section class="sponsors-section" id="patrocinadores">
+    <div class="section-container">
+      <p class="eyebrow center-text">Patrocinadores</p>
+      <h2 class="center-text">Apoiadores que acreditam no esporte</h2>
+      <div class="sponsors-grid">
+        <div data-aos="zoom-in" data-aos-delay="0">Seu logo<br><small>Sua marca aqui</small></div>
+        <div data-aos="zoom-in" data-aos-delay="100">Seu logo<br><small>Sua marca aqui</small></div>
+        <div data-aos="zoom-in" data-aos-delay="200">Seu logo<br><small>Sua marca aqui</small></div>
+        <div data-aos="zoom-in" data-aos-delay="300">Seu logo<br><small>Sua marca aqui</small></div>
+        <div data-aos="zoom-in" data-aos-delay="400">Seu logo<br><small>Sua marca aqui</small></div>
+      </div>
+      <p class="sponsor-call">Quer ser um patrocinador? Entre em contato e faça parte dessa jornada!</p>
+      <a class="primary-action center-action" href="#contact-modal" data-open-contact-modal>Fale comigo</a>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contato">
+    <div class="section-container cta-grid">
+      <div class="cta-visual image-slot" data-aos="fade-right">
+        <span>Imagem de impacto do atleta</span>
+      </div>
+      <div class="section-copy">
+        <h2>Sonhos se conquistam <span>com disciplina e coragem</span></h2>
+        <p>Vamos juntos rumo ao topo!</p>
+        <a class="primary-action compact-action" href="#contact-modal" data-open-contact-modal" data-aos="zoom-in">Quero
+          ser um apoiador</a>
+      </div>
+      <div class="contact-points">
+        <article data-aos="fade-up" data-aos-delay="100"><span>Parcerias</span>
+          <p>Empresas e marcas que acreditam no esporte.</p>
+        </article>
+        <article data-aos="fade-up" data-aos-delay="200"><span>Patrocínio</span>
+          <p>Apoie um atleta e faça parte desta jornada.</p>
+        </article>
+        <article data-aos="fade-up" data-aos-delay="300"><span>Contato</span>
+          <p>Vamos conversar e criar algo incrível juntos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="section-container footer-grid">
+    <a class="brand" href="#home" title="Voltar para o início">
+      <img class="brand-logo" src="assets/logo-header.png" alt="Logo Aryell Gelacki Karate">
+    </a>
+
+    <div>
+      <h3>Redes sociais</h3>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">
+          <img src="assets/instagran.png" alt="">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="assets/face.png" alt="">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="assets/youtube.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Contato</h3>
+      <p>(42) 99999-9999</p>
+      <p>gelacki.chowa@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="contact-modal" hidden>
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <a class="modal-close" href="#" data-close-contact-modal aria-label="Fechar modal">X</a>
+
+    <h2 id="contact-modal-title">Fale comigo</h2>
+    <p>Preencha seu WhatsApp e a mensagem. O envio será preparado para o e-mail gelacki.chowa@gmail.com.</p>
+
+    <form class="contact-form" id="contact-form">
+      <label for="whatsapp">Número de WhatsApp</label>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ex: (49) 99999-9999" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui" required></textarea>
+
+      <a class="primary-action form-submit-link" href="mailto:gelacki.chowa@gmail.com" data-submit-contact-form>
+        Enviar para e-mail
+      </a>
+    </form>
+  </div>
+</div>
+
+<script src="js/contact-modal.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800 });
+</script>
 </body>
 </html>
