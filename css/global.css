@@ -88,8 +88,12 @@ main {
 }
 
 .hero-section {
-  background:
+  background-image: url(../img/fundo_01.png),
     linear-gradient(90deg, rgba(2, 7, 18, 0.98) 0%, rgba(2, 15, 35, 0.86) 48%, rgba(5, 29, 70, 0.88) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   min-height: 720px;
   padding: 88px 0 48px;
 }
@@ -106,6 +110,7 @@ main {
 
 .hero-copy {
   max-width: 560px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .eyebrow {
@@ -222,7 +227,6 @@ p {
     linear-gradient(135deg, rgba(8, 125, 255, 0.22), rgba(255, 255, 255, 0.03)),
     rgba(3, 19, 41, 0.72);
   border: 1px dashed rgba(90, 174, 255, 0.7);
-  border-radius: 6px;
   color: var(--text-muted-color);
   display: flex;
   justify-content: center;
@@ -286,8 +290,14 @@ p {
 }
 
 .about-visual {
+  /* Adicione o caminho para sua imagem aqui */
+  background-image: url(../img/photo_5.jpg);
+  background-size: cover;
+  background-position: center;
   min-height: 300px;
+  border-radius: 6px;
   opacity: 0.75;
+  color: transparent; /* Esconde o texto do placeholder */
 }
 
 .stats-section {
@@ -352,7 +362,26 @@ p {
 }
 
 .training-images .image-slot {
+  background-size: cover;
+  background-position: center;
+  color: transparent; /* Esconde o texto do placeholder */
+  border-radius: 6px;
   min-height: 330px;
+}
+
+/* Substitua os caminhos pelas suas imagens */
+.training-image-1 {
+  background-image: url(../img/photo_3.png);
+  background-position: center 65%; /* Desloca a imagem um pouco para baixo */
+}
+.training-image-2 {
+  background-image: url(../img/photo_8.jpg);
+}
+.training-image-3 {
+  background-image: url(../img/photo_10.jpg);
+}
+.training-image-4 {
+  background-image: url(../img/photo_2.png);
 }
 
 .gallery-section {
@@ -369,6 +398,7 @@ p {
 
 .gallery-grid .image-slot {
   min-height: 145px;
+  border-radius: 6px;
 }
 
 .sponsors-section {
@@ -415,6 +445,7 @@ p {
 
 .cta-visual {
   min-height: 280px;
+  border-radius: 6px;
 }
 
 .contact-points {
@@ -566,6 +597,8 @@ p {
   margin-top: 12px;
 }
 
+
+
 @media screen and (max-width: 1024px) {
   .hero-grid,
   .about-grid,
@@ -573,6 +606,10 @@ p {
   .cta-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    grid-column: 1;
   }
 
   .hero-section {
@@ -593,6 +630,8 @@ p {
   .training-images {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
 }
 
 @media screen and (max-width: 620px) {
@@ -605,6 +644,7 @@ p {
     padding-block: 52px;
   }
 
+ 
   h1 {
     font-size: 4.2rem;
   }
@@ -622,4 +662,37 @@ p {
   .training-images {
     grid-template-columns: 1fr;
   }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-copy {
+    grid-column: 2;
+    text-align: right;
+  }
+
+  .hero-section {
+    background-size: cover;
+    background-position-y: 20%;
+    }
+
+  .training-image-1{
+  width: 350px;
+  height: 100px;
+}
+
+.training-image-2{
+  width: 250px;
+  height: 250px;
+}
+
+.training-image-3{
+  width: 250px;
+  height: 250px;
+}
+
+.training-image-4{
+  width: 250px;
+  height: 250px;
+}
+
 }
